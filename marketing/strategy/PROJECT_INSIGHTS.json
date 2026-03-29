@@ -1,0 +1,62 @@
+{
+  "productName": "VibeCoding Newsletter",
+  "tagline": "The AI coding playbook, delivered weekly.",
+  "category": ["content", "newsletter", "developer education", "AI-native development"],
+  "deployUrl": "https://vibecoding-newsletter.com",
+  "repoPath": "c:/Users/User/dev/vibecoding-newsletter",
+  "parentBrand": {
+    "name": "Veridux Labs",
+    "url": "https://veridux.ai"
+  },
+  "crossPromotes": [
+    {
+      "name": "EndOfCoding",
+      "url": "https://endofcoding.com",
+      "relationship": "Sister brand in AI development education"
+    },
+    {
+      "name": "Vibe Coding Academy",
+      "url": "https://vibe-coding.academy",
+      "relationship": "Premium education upsell; newsletter feeds academy enrollment"
+    }
+  ],
+  "targetAudience": [
+    "Software developers (junior to senior) actively adopting AI coding tools like Copilot, Cursor, Claude Code, and Windsurf",
+    "Engineering managers and tech leads evaluating AI development tooling for their teams",
+    "Indie hackers and solo founders using AI to build products faster",
+    "Computer science students and career changers entering AI-augmented development",
+    "CTOs and VP Engineering researching AI's impact on developer productivity and team structure"
+  ],
+  "coreValueProps": [
+    "Curated weekly playbook: tested AI coding workflows, prompt patterns, and tool comparisons distilled into actionable advice -- not hype",
+    "Practitioner perspective: written by builders who use AI tools daily in production, not journalists summarizing press releases",
+    "Career-forward content: covers not just how to use AI tools but how AI is reshaping developer roles, hiring, and team structures"
+  ],
+  "techStack": ["Next.js", "TypeScript", "Tailwind CSS"],
+  "pricingModel": "Free weekly newsletter. Revenue through sponsorships from developer tool companies and cross-promotion of Veridux Labs products (EndOfCoding, Vibe Coding Academy, Vibe Coding Ebook). Future premium tier potential for in-depth tutorials and exclusive content.",
+  "competitors": [
+    {
+      "name": "TLDR AI",
+      "url": "https://tldr.tech/ai",
+      "positioning": "High-volume daily AI newsletter covering broad AI news, research, and tools. Wide audience (tech workers, not just developers). News aggregation format rather than educational/tutorial. 500K+ subscribers."
+    },
+    {
+      "name": "The Pragmatic Engineer",
+      "url": "https://newsletter.pragmaticengineer.com",
+      "positioning": "Premium engineering newsletter by Gergely Orosz. Deep-dive articles on engineering culture, career, and industry. Covers AI occasionally but not the primary focus. Paid model ($15/mo). Authoritative voice in eng leadership."
+    },
+    {
+      "name": "Bytes.dev",
+      "url": "https://bytes.dev",
+      "positioning": "Popular JavaScript/web dev newsletter with humor. Covers framework updates, tools, and web dev trends. Light on AI-specific content. Entertainment-forward tone. 200K+ subscribers."
+    }
+  ],
+  "differentiators": [
+    "Exclusively focused on AI-native development (vibe coding) -- not general AI news or general dev news",
+    "Practitioner-written with real code examples, prompt patterns, and tested workflows",
+    "Direct pipeline to Veridux Labs education products (EndOfCoding, Vibe Coding Academy) for deeper learning",
+    "Covers the cultural and career shift, not just the tooling",
+    "Weekly cadence optimized for depth over frequency"
+  ],
+  "lastUpdated": "2026-03-29"
+}
