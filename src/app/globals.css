@@ -195,6 +195,16 @@ a:hover {
   text-align: center;
 }
 
+.subscribe-success {
+  padding: 1rem 1.5rem;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text);
+}
+
 /* Stats */
 .stats {
   display: flex;
