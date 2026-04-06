@@ -21,3 +21,8 @@ out/
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+.env.*
+__pycache__/
+dist/
+*.log
+.DS_Store
