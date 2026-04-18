@@ -205,6 +205,13 @@ a:hover {
   color: var(--text);
 }
 
+.subscribe-error {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #f87171;
+  text-align: center;
+}
+
 /* Stats */
 .stats {
   display: flex;
