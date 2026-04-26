@@ -45,7 +45,7 @@ export default function Home() {
           <span className="stat-label">Cadence</span>
         </div>
         <div className="stat">
-          <span className="stat-number">52+</span>
+          <span className="stat-number">100+</span>
           <span className="stat-label">Episodes</span>
         </div>
         <div className="stat">
@@ -168,7 +168,7 @@ export default function Home() {
         <p>
           © {new Date().getFullYear()} VibeCoding Newsletter ·{" "}
           <a
-            href="https://buttondown.email/endofcoding"
+            href="https://buttondown.com/endofcoding"
             target="_blank"
             rel="noopener noreferrer"
           >
