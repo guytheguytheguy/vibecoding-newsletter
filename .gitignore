@@ -26,3 +26,6 @@ __pycache__/
 dist/
 *.log
 .DS_Store
+
+# Added by git-hygiene
+.vercel/
