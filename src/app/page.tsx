@@ -1,6 +1,25 @@
 import ButtondownForm from "@/components/ButtondownForm";
 
-export default function Home() {
+async function getSubscriberCount(): Promise<number | null> {
+  const apiKey = process.env.BUTTONDOWN_API_KEY;
+  if (!apiKey) return null;
+  try {
+    const res = await fetch('https://api.buttondown.email/v1/subscribers?status=regular', {
+      headers: { Authorization: `Token ${apiKey}` },
+      next: { revalidate: 3600 },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.count ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export default async function Home() {
+  const subscriberCount = await getSubscriberCount();
+  const subscriberDisplay = subscriberCount ? `${subscriberCount.toLocaleString()}+` : null;
+
   return (
     <>
       {/* Nav */}
@@ -40,6 +59,12 @@ export default function Home() {
 
       {/* Stats */}
       <div className="stats">
+        {subscriberDisplay && (
+          <div className="stat">
+            <span className="stat-number">{subscriberDisplay}</span>
+            <span className="stat-label">Subscribers</span>
+          </div>
+        )}
         <div className="stat">
           <span className="stat-number">Weekly</span>
           <span className="stat-label">Cadence</span>
