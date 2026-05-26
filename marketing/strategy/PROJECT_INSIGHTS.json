@@ -1,63 +1,85 @@
 {
-  "product_name": "VibeCoding Newsletter",
+  "name": "VibeCoding Newsletter",
   "slug": "vibecoding-newsletter",
   "tagline": "The AI coding playbook, delivered weekly.",
-  "value_proposition": "VibeCoding Newsletter is the practitioner-written weekly digest for developers actively adopting AI-native development workflows. While general AI newsletters cover AI news and research briefings, VibeCoding Newsletter delivers tested prompt patterns, tool comparisons, workflow breakdowns, and career intelligence written by builders who use Claude Code, Cursor, Copilot, and Windsurf daily in production. It is the editorial hub for the Veridux Labs vibe-coding education ecosystem.",
-  "target_audience": [
-    "Software developers (junior to senior) actively adopting AI coding tools like Claude Code, Cursor, GitHub Copilot, and Windsurf",
-    "Engineering managers and tech leads evaluating AI development tooling for their teams and assessing productivity impact",
-    "Indie hackers and solo founders using AI coding tools to build and ship products without a full engineering team",
-    "Computer science students and career changers entering the AI-augmented development job market",
-    "CTOs and VP Engineering researching how AI is reshaping developer productivity, team structure, and hiring"
-  ],
-  "key_features": [
-    "Weekly practitioner-written deep dives on AI coding tools, prompt patterns, and vibe coding workflows",
-    "Tool comparison content: head-to-head breakdowns of Claude Code, Cursor, Copilot, Windsurf, and Codeium",
-    "Workflow breakdowns: real coding sessions with AI tools dissected step-by-step",
-    "Career intelligence: how AI is changing developer hiring, salaries, and required skillsets",
-    "Buttondown-powered email delivery with clean, distraction-free reading experience",
-    "Standalone Next.js landing page optimized for newsletter subscriber conversion",
-    "Cross-promotion to Vibe Coding Academy, VibeCoding Ebook, and EndOfCoding for depth-seeking readers",
-    "Community access: readers connect with other AI-native developers in the Veridux Labs community"
-  ],
-  "pricing": {
-    "model": "Free newsletter — revenue via sponsorships and cross-promotion of Veridux Labs products",
-    "processor": "Buttondown for email delivery",
-    "tiers": [
-      {
-        "name": "Free",
-        "price": "$0",
-        "features": [
-          "Weekly AI coding digest",
-          "Access to full newsletter archive",
-          "Community recommendations",
-          "Early access to Veridux Labs product launches"
-        ]
-      }
+  "productCategory": "content/newsletter",
+  "targetAudience": {
+    "primary": [
+      "Software developers (any level) actively using AI coding tools: Claude Code, Cursor, GitHub Copilot, Windsurf, Codeium",
+      "Indie hackers and solo founders who build and ship products using AI-assisted development"
     ],
-    "revenue_streams": [
-      "Developer tool company sponsorships",
-      "Cross-promotion of Vibe Coding Academy (course sales)",
-      "Cross-promotion of VibeCoding Ebook (ebook sales)",
-      "Cross-promotion of EndOfCoding (platform signups)",
-      "Potential future paid premium tier for in-depth tutorials"
+    "secondary": [
+      "Engineering managers and tech leads evaluating AI tooling for their teams",
+      "CS students and career changers entering an AI-augmented job market",
+      "CTOs and VP Engineering studying how AI is reshaping developer productivity and hiring"
     ]
   },
-  "competitive_advantages": [
-    "Exclusively focused on AI-native development (vibe coding) — not broad AI news or general developer content",
-    "Practitioner-written with real code, real prompts, and real production workflows — not journalist summaries",
-    "Direct pipeline to Veridux Labs education products (Vibe Coding Academy, VibeCoding Ebook, EndOfCoding)",
-    "Covers cultural and career dimensions of AI adoption, not just tool tutorials",
-    "Weekly cadence optimized for depth — one well-researched edition rather than daily link roundups",
-    "Buttondown delivery ensures high inbox deliverability and clean reader experience"
+  "uniqueValue": "VibeCoding Newsletter is the only practitioner-written weekly digest exclusively focused on AI-native development workflows. Where general AI newsletters skim headlines, VibeCoding delivers tested prompt patterns, tool comparisons with real code, and career context — written by builders who ship with these tools daily. Every issue is actionable in under 10 minutes.",
+  "keyFeatures": [
+    "Weekly deep dives on AI coding tools, prompt patterns, and vibe coding workflows",
+    "Head-to-head tool comparisons: Claude Code, Cursor, Copilot, Windsurf, Codeium",
+    "Real coding workflow breakdowns with actual prompts and code samples",
+    "Career intelligence: how AI is reshaping developer hiring, salaries, and required skills",
+    "Buttondown-powered delivery — high inbox deliverability, clean reading experience",
+    "Next.js landing page optimized for subscriber conversion",
+    "Ecosystem cross-promotion: Academy courses, Ebook, EndOfCoding commentary surfaced inline"
   ],
-  "portfolio_family": "Veridux Labs",
-  "portfolio_url": "https://veridux.ai",
-  "deploy_url": "https://vibecoding-newsletter.com",
-  "repo_path": "C:/Users/User/dev/vibecoding-newsletter",
-  "tech_stack": ["Next.js", "TypeScript", "Tailwind CSS", "Buttondown"],
+  "pricingModel": {
+    "model": "Free to subscribe",
+    "revenueStreams": [
+      "Developer tool company sponsorships",
+      "Cross-promotion driving course sales at Vibe Coding Academy",
+      "Cross-promotion driving Vibe Coding Ebook purchases",
+      "Cross-promotion driving EndOfCoding platform signups",
+      "Potential future paid premium tier (not yet launched)"
+    ]
+  },
+  "deployUrl": "https://vibecoding-newsletter.com",
+  "techStack": ["Next.js 14", "TypeScript", "Tailwind CSS", "Buttondown email embed", "Vercel"],
+  "competitiveAdvantages": [
+    "Editorial specificity: 100% AI-native development focus — no topic drift",
+    "Practitioner-written: real tools, real prompts, real production context — not journalist summaries",
+    "Ecosystem leverage: direct pipeline to paid Veridux Labs education products",
+    "Weekly depth over daily volume: differentiated in a noisy daily-newsletter world",
+    "Free with Buttondown: zero friction to subscribe, high deliverability"
+  ],
+  "crossPromotionTargets": [
+    {
+      "product": "EndOfCoding",
+      "url": "https://endofcoding.com",
+      "rationale": "Core Veridux Labs sister product; newsletter readers seeking a platform to build with AI tools are natural EndOfCoding prospects"
+    },
+    {
+      "product": "Vibe Coding Academy",
+      "url": "https://vibe-coding.academy",
+      "rationale": "Newsletter previews course content; Academy students are encouraged to subscribe for ongoing learning between lessons"
+    },
+    {
+      "product": "Vibe Coding Ebook",
+      "url": "https://vibecodingebook.com",
+      "rationale": "Newsletter editions link to relevant Ebook chapters; subscriber discount offer drives ebook sales"
+    },
+    {
+      "product": "Kynvo",
+      "url": "https://kynvo.ai",
+      "rationale": "AI-native developers are also building their professional presence; Kynvo profiling is a natural next step"
+    },
+    {
+      "product": "LLMHire",
+      "url": "https://llmhire.com",
+      "rationale": "Developers reading about AI coding tools are actively in or approaching an AI-first job market"
+    }
+  ],
+  "metrics": {
+    "_note": "All figures below are forward-looking estimates only. No verified subscriber or revenue data is represented here.",
+    "estimatedSubscribersMonth3": "500–1,000",
+    "estimatedSubscribersMonth12": "5,000–10,000",
+    "targetOpenRate": "42–48%",
+    "estimatedSponsorshipRevenueMonth6": "$1,500–$5,000/month",
+    "publishingCadence": "Weekly (Tuesdays)"
+  },
+  "company": "Veridux Labs",
+  "companyUrl": "https://veridux.ai",
   "status": "live",
-  "billing": "Sponsorship-based (no subscriber fee)",
-  "tier": 2,
-  "last_updated": "2026-04-06"
+  "lastUpdated": "2026-05-25"
 }
