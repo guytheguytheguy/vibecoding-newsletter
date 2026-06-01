@@ -5,6 +5,17 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-06-01 | ops | Daily assessment — SSL CRITICAL (27d), no code changes
+
+- SSL expiry: **27 days remaining** (2026-06-28) — CRITICAL threshold active (<30 days per gates.md)
+- Live health check: HTTP 200, 392ms response — site performing well
+- Vercel deployment: READY (dpl_DxAQzsR72YU6fWto9t4n7qXnE199, Node 24.x)
+- Readiness: 97/G4 — unchanged
+- No code changes made today (all remaining tasks are manual actions)
+- **Action required**: Verify Vercel SSL auto-renewal NOW — 27 days until expiry
+- **Action required**: Set BUTTONDOWN_API_KEY in Vercel to unblock subscriber metrics
+- **Action required**: Bulk-update ~52 YouTube descriptions → endofcoding.com/#newsletter
+
 ## 2026-05-31 | ops | Daily assessment — SSL CRITICAL, no code changes
 
 - SSL expiry: **28 days remaining** (2026-06-28) — crossed CRITICAL threshold (< 30 days per gates.md)
