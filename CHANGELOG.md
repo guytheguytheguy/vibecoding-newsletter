@@ -5,6 +5,19 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-06-03 | ops | Daily assessment — SSL CRITICAL (25d, worsening), no code changes
+
+- SSL expiry: **25 days remaining** (2026-06-28) — worsening from 27d on 2026-06-01. Vercel auto-renewal status still unverified.
+- Live health check: HTTP 200, 320ms response — site healthy and fast
+- Vercel deployment: READY (dpl_DxAQzsR72YU6fWto9t4n7qXnE199), Node 24.x
+- Readiness: 97/G4 — unchanged
+- Newsletter draft "week-of-june2" at REFINED_TUESDAY status; send target 2026-06-05 (2 days)
+- No code changes today — all outstanding items are manual actions
+- **P0 ACTION**: Verify Vercel SSL auto-renewal → vibecoding-newsletter.com expires 2026-06-28 (25 days)
+- **P1 ACTION**: Update ~52 YouTube video descriptions → replace stale newsletter URL with endofcoding.com/#newsletter
+- **P2 ACTION**: Set BUTTONDOWN_API_KEY in Vercel env vars (subscriber metrics blocked)
+- **P2 ACTION**: Verify NEXT_PUBLIC_SENTRY_DSN in Vercel env vars
+
 ## 2026-06-01 | ops | Daily assessment — SSL CRITICAL (27d), no code changes
 
 - SSL expiry: **27 days remaining** (2026-06-28) — CRITICAL threshold active (<30 days per gates.md)
