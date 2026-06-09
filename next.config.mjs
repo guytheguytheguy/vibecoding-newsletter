@@ -3,6 +3,19 @@ import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "standalone",
+  // Folded into the Vibe Coding Academy umbrella (2026-06-09): the newsletter
+  // now lives at vibe-coding.academy/newsletter against the same Buttondown
+  // `endofcoding` audience. This domain stays live as a 301 redirect-in funnel
+  // so existing inbound links (emails, archive links) keep resolving.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        destination: "https://www.vibe-coding.academy/newsletter",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withSentryConfig(nextConfig, {
