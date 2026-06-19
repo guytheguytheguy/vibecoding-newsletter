@@ -5,6 +5,16 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-06-19 | ops | Daily assessment — SSL auto-renewed (72d ✅), newsletter Edition 10 OVERDUE (63 days)
+
+- SSL: **AUTO-RENEWED** — was CRITICAL at 25d on 2026-06-03, now HEALTHY at 72d (expires 2026-08-30) ✅
+- Live health check: HTTP 200, 860ms — site healthy
+- Readiness: 97/G4 — unchanged
+- No code changes today — all outstanding items are manual actions
+- **P0 MANUAL ACTION**: Send Newsletter Edition 10 via Buttondown dashboard — 63-day gap (last sent April 17). Recommended subject: "I scanned 500 AI-generated repos. 94% had security vulnerabilities." Send TODAY.
+- **P1 MANUAL ACTION**: Set BUTTONDOWN_API_KEY in Vercel env vars (prj_0fyzuN1TXC4KcDumdJXDUpkhmqZR) — subscriber metrics blocked
+- **P1 MANUAL ACTION**: Bulk-update ~52 YouTube video descriptions → replace stale newsletter URL with endofcoding.com/#newsletter
+
 ## 2026-06-03 | ops | Daily assessment — SSL CRITICAL (25d, worsening), no code changes
 
 - SSL expiry: **25 days remaining** (2026-06-28) — worsening from 27d on 2026-06-01. Vercel auto-renewal status still unverified.
