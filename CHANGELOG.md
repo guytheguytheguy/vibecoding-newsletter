@@ -5,6 +5,18 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-06-21 | ops | Daily assessment — site healthy, Edition 10 draft ready (65-day gap, needs approval)
+
+- Live health check: HTTP 200, 415ms — site healthy and fast
+- SSL: 70 days remaining (2026-08-30) — healthy, auto-renewed ✅
+- Vercel: READY (prj_0fyzuN1TXC4KcDumdJXDUpkhmqZR) — no code changes, no deploy triggered
+- Readiness: 97/G4 — unchanged
+- Edition 10 draft finalized by 25-newsletter-email agent: "I scanned 500 AI-generated repos. 94% had security vulnerabilities." — awaiting Guy's approval. Target send: Thursday 2026-06-26.
+- YouTube UTM sync skipped today (Shabbat gate); runs Sunday 2026-06-22. 52 videos still have stale newsletter CTAs.
+- **P0 MANUAL ACTION**: Review and approve Edition 10 draft → send via buttondown.com/endofcoding — 65-day gap is critical churn risk
+- **P1 MANUAL ACTION**: Set BUTTONDOWN_API_KEY in Vercel env vars — subscriber metrics blocked
+- **P1 MANUAL ACTION**: Bulk-update ~52 YouTube video descriptions → endofcoding.com/#newsletter
+
 ## 2026-06-19 | ops | Daily assessment — SSL auto-renewed (72d ✅), newsletter Edition 10 OVERDUE (63 days)
 
 - SSL: **AUTO-RENEWED** — was CRITICAL at 25d on 2026-06-03, now HEALTHY at 72d (expires 2026-08-30) ✅
