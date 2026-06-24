@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,6 +34,19 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        {/* Statcounter */}
+        <Script id="statcounter-init" strategy="afterInteractive">
+          {`var sc_project=13319486;var sc_invisible=1;var sc_security="65db2bf1";`}
+        </Script>
+        <Script id="statcounter" src="https://www.statcounter.com/counter/counter.js" strategy="afterInteractive" />
+        <noscript>
+          <div className="statcounter">
+            <a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="statcounter" src="https://c.statcounter.com/13319486/0/65db2bf1/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade" />
+            </a>
+          </div>
+        </noscript>
       </body>
     </html>
   );
