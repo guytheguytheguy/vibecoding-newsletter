@@ -34,6 +34,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <Script src="https://veridux-analytics.vercel.app/v1/agent.js" data-site="vdx_newsletter_01" strategy="afterInteractive" />
         {/* Statcounter */}
         <Script id="statcounter-init" strategy="afterInteractive">
           {`var sc_project=13319486;var sc_invisible=1;var sc_security="65db2bf1";`}
