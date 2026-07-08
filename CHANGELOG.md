@@ -5,6 +5,21 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-07-08 | ops | Daily assessment — 308 redirect healthy, Edition 10 draft Tuesday-refined (82-day gap, send Thu Jul 10)
+
+- Live health check: HTTP 308 → https://www.vibe-coding.academy/newsletter — redirect intentional and serving correctly
+- SSL: 53 days remaining (2026-08-30) — WARNING range (30–90d), auto-renew expected before threshold
+- Vercel: READY — latest deploy dpl_FzH3VwVBhVZ4TthtzagSVN9mxfiY on commit 3f96aee (feat: Veridux tracking agent)
+- Readiness: 97/G4 — unchanged
+- Edition 10 status: TUESDAY_DRAFT_READY — 82-day gap. Target send Thursday 2026-07-10. Pending Guy's approval.
+- Newsletter subject recommended: "AI Expanded Everywhere This Week. Here's What Actually Matters."
+- Blocking before send: (1) Guy uploads tool-faceoff video to YouTube, (2) confirm edition number, (3) Guy approves draft
+- **P0 MANUAL ACTION**: Review and approve Edition 10 draft → send via buttondown.com/endofcoding by Thu Jul 10
+- **P0 MANUAL ACTION**: Add Buttondown capture form to vibe-coding.academy — endofcoding.com redirects there, zero acquisition (9th failure)
+- **P0 MANUAL ACTION**: Set BUTTONDOWN_API_KEY in Vercel env vars — subscriber metrics blocked (9 consecutive runs)
+- **P1 MANUAL ACTION**: Bulk-update ~52 YouTube video descriptions → endofcoding.com/#newsletter
+- No code changes today — all blocking items are manual/Guy-owned
+
 ## 2026-06-21 | ops | Daily assessment — site healthy, Edition 10 draft ready (65-day gap, needs approval)
 
 - Live health check: HTTP 200, 415ms — site healthy and fast
