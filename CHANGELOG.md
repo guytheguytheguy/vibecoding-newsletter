@@ -5,6 +5,18 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-07-13 | fix | Next.js security upgrade — 14.2.29 → 15.5.20 (postcss override, CVEs resolved)
+
+- Upgraded `next` 14.2.29 → 15.5.20 (`eslint-config-next` matched); react/react-dom stayed on ^18.3.1 (15.5.20 supports React 18 peer range, no React 19 migration needed)
+- `npm audit` on 14.2.29 flagged `next` under advisory range `9.3.4-canary.0 - 16.3.0-canary.5` covering 14 CVEs (SSRF via WebSocket upgrades GHSA-c4j6-fc7j-m34r, CVSS 8.6; middleware/i18n auth bypass GHSA-36qx-fr4f-26g5, CVSS 7.5; RSC DoS GHSA-q4gf-8mx6-v5v3/GHSA-8h8q-6873-q5fj; RSC cache poisoning GHSA-wfc6-r584-vfw7; CSP-nonce XSS GHSA-ffhc-5mcf-pf4q; and others) — all fixed upstream only at ≥15.5.16, so latest 14.x (14.2.35) alone did not clear them; jumped to Next's `backport` dist-tag 15.5.20 to stay one major (not two, avoiding the React 19 requirement of Next 16) while getting every fix
+- Added `overrides.postcss: ^8.5.18` — Next 15.5.20 still vendors postcss@8.4.31 internally (GHSA-qx2v-qp2m-jg93, XSS in stringify); override forces the patched version project-wide
+- Verified: no usage of the Next 15 async-API breaking changes (`cookies()`, `headers()`, `searchParams`, route `params`) anywhere in `src/` — zero code changes needed beyond the version bump
+- `npm run build`: compiled successfully, 0 TypeScript errors, all 6 pages generated
+- `npm audit`: `next` and `postcss` vulnerabilities fully cleared (15 → 10, remaining 10 are unrelated Sentry/OpenTelemetry/babel toolchain transitive deps, out of scope for this fix)
+- Smoke-checked `ButtondownForm.tsx` and `page.tsx` (home page, subscriber-count fetch with `next: { revalidate }`) — plain client fetch + RSC data fetch, unaffected by the upgrade, confirmed via successful static build of the page
+- No test suite exists in this repo to run
+- Manual/pending (unrelated to this fix, tracked separately): Edition 10 send via Buttondown, bulk-update of ~52 YouTube video descriptions, `BUTTONDOWN_API_KEY` still not set in Vercel
+
 ## 2026-07-08 | ops | Daily assessment — 308 redirect healthy, Edition 10 draft Tuesday-refined (82-day gap, send Thu Jul 10)
 
 - Live health check: HTTP 308 → https://www.vibe-coding.academy/newsletter — redirect intentional and serving correctly
