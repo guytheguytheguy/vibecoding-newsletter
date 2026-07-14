@@ -5,6 +5,16 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-07-14 | ops | Daily assessment — no deploy drift, site healthy, no code changes needed
+
+- Live health check: HTTP 308 → https://www.vibe-coding.academy/newsletter, ~300ms response — healthy
+- SSL: expires 2026-08-30 (~47 days remaining) — WARNING range (30–90d), auto-renew expected
+- Vercel: READY — latest production deploy dpl_DDpRiWXYE7TmSNLE3Rn2QkyuDHjo on commit 1af73a2, matches local git HEAD exactly (no drift this run, unlike 2026-07-13's 12-day/2-commit gap)
+- Working tree clean, no uncommitted changes
+- Readiness: 97/G4 — unchanged; `lastAudit` bumped to 2026-07-14 in `dashboard/projects.json`
+- Edition 10 send, 52 YouTube description updates, and BUTTONDOWN_API_KEY/NEXT_PUBLIC_SENTRY_DSN Vercel env vars remain outstanding manual actions (no Buttondown/YouTube API credentials or Vercel env-var-write tool available in this session)
+- No code changes today — nothing required a fix
+
 ## 2026-07-13 | fix | Next.js security upgrade — 14.2.29 → 15.5.20 (postcss override, CVEs resolved)
 
 - Upgraded `next` 14.2.29 → 15.5.20 (`eslint-config-next` matched); react/react-dom stayed on ^18.3.1 (15.5.20 supports React 18 peer range, no React 19 migration needed)
