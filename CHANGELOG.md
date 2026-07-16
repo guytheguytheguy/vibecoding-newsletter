@@ -5,6 +5,18 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-07-16 | fix | Cleared 10 npm audit vulnerabilities via dependency updates, redeployed
+
+- `npm audit` flagged 10 vulnerabilities (1 low, 8 moderate, 1 high) that appeared since the 2026-07-13 audit with no source changes in between — all transitive, via `@sentry/nextjs` → `@sentry/node` → `@opentelemetry/*` and dev-toolchain (`js-yaml`, `brace-expansion`, `@babel/core`)
+- Highest severity: `fast-uri` path-traversal via percent-encoded dot segments / host confusion via percent-encoded authority delimiters (high, runtime-reachable through the Sentry SDK); also OpenTelemetry unbounded-memory-allocation in W3C Baggage propagation (moderate)
+- Ran `npm audit fix` twice: bumped `@sentry/nextjs` 10.51.0 → 10.65.0 and transitive deps, all within the existing `^10.51.0` semver range in `package.json` — only `package-lock.json` changed, no `package.json` edit needed
+- `npm run build`: compiled successfully, 0 TypeScript errors, all 6 pages generated
+- `npm audit`: 10 → 0 vulnerabilities
+- No GitHub auto-deploy webhook on this Vercel project (recurring portfolio pattern) — manually redeployed via `vercel deploy --prod --yes` (dpl_8AmuVRouVCpyDYBR7rdaGGxcTzmS, READY, aliased to vibecoding-newsletter.com)
+- Post-deploy verification: HTTP 308 → vibe-coding.academy/newsletter, ~707ms, SSL valid to 2026-08-30
+- `dashboard/projects.json`: `lastAudit` bumped to 2026-07-16, notes refreshed (commit 182e94eb in the `apps` monorepo)
+- Manual actions still outstanding (unchanged): Edition 10 send via Buttondown, 52 YouTube description updates, `BUTTONDOWN_API_KEY`/`NEXT_PUBLIC_SENTRY_DSN` unset in Vercel
+
 ## 2026-07-14 | ops | Daily assessment — no deploy drift, site healthy, no code changes needed
 
 - Live health check: HTTP 308 → https://www.vibe-coding.academy/newsletter, ~300ms response — healthy
