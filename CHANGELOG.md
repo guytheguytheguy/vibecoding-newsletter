@@ -5,6 +5,19 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-07-17 | ops | Daily assessment — healthy, build clean, no code changes needed
+
+- Live health check: `HTTP 308` → `https://www.vibe-coding.academy/newsletter` on both `/` and `/robots.txt`/`/sitemap.xml` (whole app is an intentional redirect shim) — healthy
+- SSL: valid to 2026-08-30 (unchanged, ~44 days remaining) — WARNING range, auto-renew expected
+- `npm audit`: 0 vulnerabilities (holding since the 2026-07-16 dependency fix)
+- `npm run build`: compiled successfully, 0 TypeScript errors, all 6 routes generated (`/`, `/_not-found`, `/api/subscriber-count`, `/robots.txt`, `/sitemap.xml`) — build was slow (~15min) due to heavy concurrent load on the shared dev box (8 daily agents running in parallel this cycle), not a project issue
+- Confirmed via `vercel env ls production`: zero environment variables configured on `prj_0fyzuN1TXC4KcDumdJXDUpkhmqZR` — `BUTTONDOWN_API_KEY` and `NEXT_PUBLIC_SENTRY_DSN` still unset (low priority; the page they'd affect is dead code behind the 308 redirect)
+- Checked for an Edition 10 draft in this repo — none exists here; the newsletter content/draft lifecycle lives in the portfolio's newsletter-automation pipeline, out of scope for this repo. Per portfolio memory, Edition 10 is marked READY_FOR_SEND (YouTube-dependent bullet dropped) and is blocked only on Guy's manual Buttondown send approval — not a code or repo issue
+- `npx npm-check-updates`: Next 16.2.10 / React 19.2.7 / TypeScript 7 / ESLint 10 all available as major-version bumps. Deferred — this repo is a redirect-only shim with no test suite; a major framework migration carries real regression risk for near-zero user-facing benefit and isn't appropriate for an unattended daily pass
+- Reviewed `src/app/page.tsx`, marketing docs (`marketing/`, `product-and-marketing/`) for staleness — no actionable, low-risk improvements found; page content is confirmed dead code (100% of paths 308-redirect via `next.config.mjs`)
+- No code changes today — nothing required a fix
+- Manual actions still outstanding (unchanged): Edition 10 send via Buttondown dashboard (Guy's approval only), 52 YouTube description updates, `BUTTONDOWN_API_KEY`/`NEXT_PUBLIC_SENTRY_DSN` unset in Vercel
+
 ## 2026-07-16 | fix | Cleared 10 npm audit vulnerabilities via dependency updates, redeployed
 
 - `npm audit` flagged 10 vulnerabilities (1 low, 8 moderate, 1 high) that appeared since the 2026-07-13 audit with no source changes in between — all transitive, via `@sentry/nextjs` → `@sentry/node` → `@opentelemetry/*` and dev-toolchain (`js-yaml`, `brace-expansion`, `@babel/core`)
