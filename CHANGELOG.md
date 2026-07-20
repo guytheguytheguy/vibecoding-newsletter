@@ -5,6 +5,18 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-07-20 | docs | README stack version fix + redirect-shim status note
+
+- Live health check: `HTTP 308` → `https://www.vibe-coding.academy/newsletter` (~confirmed via curl) — healthy
+- SSL: valid to 2026-08-30 (unchanged, ~41 days remaining)
+- `npm audit`: 0 vulnerabilities (550 total deps scanned)
+- `npm run build`: exit 0, compiles clean
+- Deploy-drift check: latest Vercel deployment (`dpl_8AmuVRouVCpyDYBR7rdaGGxcTzmS`, READY, commit `299a613`) still current — commits ahead of it are CHANGELOG-only, no source drift
+- Found and fixed a real doc bug: `README.md` claimed "Next.js 14" but `package.json` has been on `next@15.5.20` since the 2026-07-16 security fix — stale README version claim corrected to Next.js 15
+- Added a status callout to the top of `README.md` explaining the repo now serves purely as a 308-redirect shim into `vibe-coding.academy/newsletter` (folded in 2026-06-09) — this context was previously undocumented in-repo and only lived in portfolio memory/CHANGELOG history, so a fresh reader opening this repo had no way to know `src/page.tsx` is unreachable dead code
+- `npm outdated`: Next 16.2.10 / React 19.2.7 / TypeScript 7 / ESLint 10 majors available — deferred again (redirect-only shim, no test suite, near-zero user-facing benefit vs regression risk for an unattended daily pass), consistent with 2026-07-17 assessment
+- Manual actions still outstanding (unchanged): Edition 10 send via Buttondown dashboard (Guy's approval only), 52 YouTube description updates, `BUTTONDOWN_API_KEY`/`NEXT_PUBLIC_SENTRY_DSN` unset in Vercel
+
 ## 2026-07-18 | ops | Daily assessment — healthy, build clean, no deploy drift, no code changes needed
 
 - Live health check: `HTTP 308` → `https://www.vibe-coding.academy/newsletter` (~600ms) — healthy
