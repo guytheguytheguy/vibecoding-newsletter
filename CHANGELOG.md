@@ -5,6 +5,18 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 
 ---
 
+## 2026-07-21 | ops | Daily assessment — healthy, build clean, no deploy drift, fixed stale projects.json fields
+
+- Live health check: `HTTP 308` → `https://www.vibe-coding.academy/newsletter` (~629ms) — healthy
+- SSL: valid to 2026-08-30 (unchanged, ~40 days remaining) — WARNING range, auto-renew expected
+- `npm audit`: 0 vulnerabilities (holding since the 2026-07-16 dependency fix)
+- `npm run build`: compiled successfully, 0 TypeScript errors, all 6 routes generated
+- `projects.json` integrity check: 77/77 entries in both working tree and HEAD — no truncation
+- Deploy-drift check: latest Vercel deployment (`dpl_8AmuVRouVCpyDYBR7rdaGGxcTzmS`, READY, commit `299a613`) confirmed current — commits ahead (`dd5894a`, `b6215b6`, `2005137`, `56fc171`) are all docs-only, no source drift
+- Found and fixed two stale fields in the portfolio's `dashboard/projects.json` entry for this project (in the `apps` repo, not this one): `description` still claimed "Next.js 14" (actual has been 15.5.20 since 2026-07-16, matching yesterday's README fix); `repo.hasReadme` was `false` despite `README.md` existing here since 2026-04-12
+- No code changes needed in this repo this run
+- Manual actions still outstanding (unchanged): Edition 10 send via Buttondown dashboard (Guy's approval only, now 11 days overdue), 52 YouTube description updates, `BUTTONDOWN_API_KEY`/`NEXT_PUBLIC_SENTRY_DSN` unset in Vercel
+
 ## 2026-07-20 | docs | README stack version fix + redirect-shim status note
 
 - Live health check: `HTTP 308` → `https://www.vibe-coding.academy/newsletter` (~confirmed via curl) — healthy
