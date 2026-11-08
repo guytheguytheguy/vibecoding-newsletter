@@ -196,3 +196,6 @@ Format: `YYYY-MM-DD | type | summary | commit SHA`
 - Vercel Analytics added to `layout.tsx`
 - OG tags and metadataBase configured
 - Readiness: 81/G3
+
+## 2026-11-08
+- c58869d: fix — Next.js 15.5.21 -> 15.5.29 (critical RCE / cache-poisoning advisories), @sentry/nextjs ^10.78.0, brace-expansion override. npm audit: 2 critical/7 high -> 0; 10 moderate remain (build-time only). Build clean 6/6. Manually deployed to prod (READY); site 308 healthy.
